@@ -11,13 +11,10 @@ import java.util.List;
 @Entity
 @Table
 @Data
-//@Builder
-//@Access(AccessType.PROPERTY)
-//@AllArgsConstructor
-//@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member implements Serializable {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String memberId;
 

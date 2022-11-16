@@ -5,14 +5,13 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
-import java.util.Optional;
 
 import static com.example.queryDsl.model.QBook.book;
 
 @RequiredArgsConstructor
 public class BookRepositoryCustomImpl implements BookRepositoryCustom{
     private final JPAQueryFactory queryFactory;
-    //private final ParsingEntityUtils parsingEntityUtils;
+
     @Override
     public List<Book> searchAll() {
         List<Book> result = queryFactory

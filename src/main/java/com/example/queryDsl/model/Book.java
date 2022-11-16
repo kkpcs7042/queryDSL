@@ -10,11 +10,7 @@ import java.util.List;
 
 @Entity
 @Table
-@Getter
-@Setter
-//@Builder
-//@Access(AccessType.PROPERTY)
-@AllArgsConstructor
+@Getter @Setter
 public class Book implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -10,13 +10,10 @@ import java.io.Serializable;
 @Entity
 @Table
 @Data
-//@Builder
-//@Access(AccessType.PROPERTY)
-//@AllArgsConstructor
-//@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Borrow implements Serializable {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "members")
